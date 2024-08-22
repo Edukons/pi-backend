@@ -1,0 +1,78 @@
+[project]
+name = "livraria"
+version = "1.0.0"
+description = "Uma API REST de uma livraria feita com Django e Django REST Framework."
+authors = [{ name = "Marco André Mendes", email = "marcoandre@gmail.com" }]
+dependencies = [
+    'dj-database-url>=2.1.0',
+    'django-cloudinary-storage>=0.3.0',
+    'django-cors-headers>=4.3.0',
+    'django-extensions>=3.2.3',
+    'django-filter>=23.3',
+    'django>=5.0.6',
+    'djangorestframework-simplejwt>=5.3.0',
+    'djangorestframework>=3.14.0',
+    'drf-spectacular>=0.26.5',
+    'gunicorn>=21.2.0',
+    'netifaces>=0.11.0',
+    'passage-identity>=2.1.4',
+    'Pillow>=10.3.0',
+    'pre-commit>=3.5.0',
+    'psycopg2-binary>=2.9.9',
+    'pydotplus>=2.0.2',
+    'python-dotenv>=1.0.0',
+    'python-magic-bin>=0.4.14; sys_platform == "win32"',
+    'python-magic>=0.4.27; sys_platform == "linux"',
+    'setuptools>=68.2.2',
+    'uvicorn>=0.29.0',
+    'whitenoise[brotli]>=6.6.0',
+]
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.dev-dependencies]
+format = ["isort>=5.11.3", "black>=22.12.0"]
+dev = [
+    "black>=23.10.1",
+    "isort>=5.12.0",
+    "pylint>=3.0.2",
+]
+
+[[tool.pdm.autoexport]]
+filename = "requirements.txt"
+without-hashes = "true"
+
+[tool.pdm.scripts]
+pre_dev = "python ./scripts/set_my_ip.py"
+dev = "python manage.py runserver 0.0.0.0:19003"
+createsuperuser = "python manage.py createsuperuser"
+pre_migrate = "python manage.py makemigrations"
+migrate = "python manage.py migrate"
+post_migrate = "python manage.py graph_models --disable-sort-fields -g -o core.png core"
+shell = "python manage.py shell"
+shellp= "python manage.py shell_plus"
+test = "python manage.py test"
+loaddata = "python manage.py loaddata core.json"
+dumpdata = "python manage.py dumpdata --indent 2"
+cria_api = "python ./scripts/cria_api.py {args}"
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+exclude = '''
+/(
+  \.git
+ | \.hg
+ | \.mypy_cache
+ | \.tox
+ | \.venv
+ | _build
+ | buck-out
+ | build
+ | __pypackages__
+ )/
+'''
+
