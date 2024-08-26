@@ -7,4 +7,4 @@ class Animal(models.Model):
     foto = models.ImageField
     "fk de pessoa e prontuario aqui"
     def __str__(self):
-        return self.descricao
+        return self.nome
