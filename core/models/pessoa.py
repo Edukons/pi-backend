@@ -17,5 +17,5 @@ class Pessoa(models.Model):
             SUPERIOR_COMPLETO = 7, "Ensino Superior Completo"
             OUTRO = 8, "Outro"
         status_escolaridade = models.IntegerField(choices=StatusEscolaridade.choices, default=1)
-
+        
 
