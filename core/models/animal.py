@@ -8,3 +8,5 @@ class Animal(models.Model):
     "fk de pessoa e prontuario aqui"
     def __str__(self):
         return self.nome
+    class Meta:
+        verbose_name_plural = "Animais"
