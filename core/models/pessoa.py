@@ -1,11 +1,19 @@
 from django.db import models
+from uploader.models import Image
 
 class Pessoa(models.Model):
     nome = models.CharField(max_length=100)
     rg = models.CharField(max_length=9, blank=True, null=True)
     cpf = models.CharField(max_length=15)
     data_nasc = models.DateField(blank=True, null=True)
-    foto = models.ImageField
+    fotoPessoa = models.ForeignKey(
+        Image,
+        related_name="+",
+        on_delete= models.SET_NULL,
+        null=True,
+        blank=True,
+        default=None,
+    )
     class StatusEscolaridade(models.IntegerChoices):
             NENHUMA = 1, "Nenhuma"
             FUNDAMENTAL_INCOMPLETO = 2, "Fundamental Incompleto"

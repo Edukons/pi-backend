@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "drf_spectacular",
     "rest_framework",
     "rest_framework_simplejwt",
+    "uploader", 
     "core",
 ]
 
@@ -153,6 +154,7 @@ REST_FRAMEWORK = {
     "PAGE_SIZE": 10,
     # "DEFAULT_AUTHENTICATION_CLASSES": ("rest_framework_simplejwt.authentication.JWTAuthentication",), Autenticação com JWT
 }
+
 
 PASSAGE_APP_ID = os.getenv("PASSAGE_APP_ID", "app_id")
 PASSAGE_API_KEY = os.getenv("PASSAGE_API_KEY", "api_key")

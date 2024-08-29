@@ -16,13 +16,13 @@ dependencies = [
     'gunicorn>=21.2.0',
     'netifaces>=0.11.0',
     'passage-identity>=2.1.4',
-    'Pillow>=10.3.0',
+    "Pillow>=10.4.0",
     'pre-commit>=3.5.0',
     'psycopg2-binary>=2.9.9',
     'pydotplus>=2.0.2',
     'python-dotenv>=1.0.0',
-    'python-magic-bin>=0.4.14; sys_platform == "win32"',
-    'python-magic>=0.4.27; sys_platform == "linux"',
+    "python-magic-bin>=0.4.14; sys_platform == \"win32, darwin\"",
+    "python-magic>=0.4.27; sys_platform == \"linux\"",
     'setuptools>=68.2.2',
     'uvicorn>=0.29.0',
     'whitenoise[brotli]>=6.6.0',
@@ -51,7 +51,7 @@ dev = "python manage.py runserver 0.0.0.0:19003"
 createsuperuser = "python manage.py createsuperuser"
 pre_migrate = "python manage.py makemigrations"
 migrate = "python manage.py migrate"
-post_migrate = "python manage.py graph_models --disable-sort-fields -g -o core.png core"
+post_migrate = "python manage.py graph_models --disable-sort-fields -g -o core.png core uploader"
 shell = "python manage.py shell"
 shellp= "python manage.py shell_plus"
 test = "python manage.py test"
