@@ -6,3 +6,4 @@ class ProntuarioSerializer(ModelSerializer):
     class Meta:
         model = Prontuario
         fields = "__all__"
+        depth = 1

@@ -1,4 +1,5 @@
 from django.db import models
+
 from uploader.models import Image
 class Animal(models.Model):
     nome = models.CharField(max_length=30)
@@ -14,6 +15,6 @@ class Animal(models.Model):
     )
     "fk de pessoa e prontuario aqui"
     def __str__(self):
-        return self.nome
+        return f"({self.nome}) {self.especie}"
     class Meta:
         verbose_name_plural = "Animais"
