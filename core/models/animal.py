@@ -15,6 +15,6 @@ class Animal(models.Model):
     )
     "fk de pessoa e prontuario aqui"
     def __str__(self):
-        return f"({self.nome}) {self.especie}"
+        return f"{self.nome} ({self.especie})"
     class Meta:
         verbose_name_plural = "Animais"
