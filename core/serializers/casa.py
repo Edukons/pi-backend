@@ -1,8 +1,8 @@
-from rest_framework.serializers import ModelSerializer
+from rest_framework.serializers import ModelSerializer, Serializer, IntegerField
 
 from core.models import Casa
 
 class CasaSerializer(ModelSerializer):
     class Meta:
         model = Casa
-        fields = "__all__"
+        fields = ("id", "numero_comodos", "descricao", "numero_casa", "numero_moradores")
