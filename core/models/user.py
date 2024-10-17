@@ -8,6 +8,9 @@ from django.contrib.auth.models import (
     PermissionsMixin,
 )
 from django.db import models
+from django.utils.translation import gettext_lazy as _
+
+from uploader.models import Image
 
 
 class UserManager(BaseUserManager):
@@ -39,11 +42,18 @@ class UserManager(BaseUserManager):
 class User(AbstractBaseUser, PermissionsMixin):
     """User model in the system."""
 
+    class TipoUsuario(models.IntegerChoices):
+        CLIENTE = 1, "Cliente"
+        VENDEDOR = 2, "Vendedor"
+        GERENTE = 3, "Gerente"
+
     passage_id = models.CharField(max_length=255, unique=True)
     email = models.EmailField(max_length=255, unique=True)
     name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
+    foto = models.ForeignKey(Image, on_delete=models.SET_NULL, null=True, blank=True, default=None)
+    tipo_usuario = models.IntegerField(_("User Type"), choices=TipoUsuario.choices, default=TipoUsuario.CLIENTE)
 
     objects = UserManager()
 
@@ -51,7 +61,5 @@ class User(AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = []
 
     class Meta:
-        """Meta options for the model."""
-
         verbose_name = "Usuário"
         verbose_name_plural = "Usuários"
