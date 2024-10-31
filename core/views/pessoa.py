@@ -10,6 +10,6 @@ class PessoaViewSet(ModelViewSet):
     serializer_class = PessoaSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_fields = ["nome","cpf"]
-    search_fields = ['^nome', '^cpf']
+    search_fields = ['nome', 'cpf']
     ordering_fields = ["nome", "cpf", "data_nasc", "status_escolaridade", "fotoPessoa"]
     ordering = ["nome"]
