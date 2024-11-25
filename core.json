@@ -1,0 +1,180 @@
+[
+{
+  "model": "uploader.image",
+  "pk": 1,
+  "fields": {
+    "attachment_key": "8dbe4179-b9a0-43bc-844c-9228b40ff5e2",
+    "public_id": "e40bc661-8bb6-448d-a40d-45e69809c755",
+    "file": "images/e40bc661-8bb6-448d-a40d-45e69809c755.jpg",
+    "description": "Fumaçinha",
+    "uploaded_on": "2024-08-29T12:00:22.084Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 2,
+  "fields": {
+    "attachment_key": "57288072-053c-4f81-9f7a-60f9c01db8d4",
+    "public_id": "46247002-5607-4cc5-9576-078321db92de",
+    "file": "images/46247002-5607-4cc5-9576-078321db92de.jpg",
+    "description": "Eduardo",
+    "uploaded_on": "2024-08-29T12:03:20.219Z"
+  }
+},
+{
+  "model": "core.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$bgL42xM1mgm3iR3QdfTR3w$m7qFxsOTcONuAVLEczVSQX0L03Ufv3BIyyd2EH6zT2Y=",
+    "last_login": "2024-11-25T15:32:27.621Z",
+    "is_superuser": true,
+    "passage_id": "324321544235435",
+    "email": "a@a.com",
+    "name": "Superusuário",
+    "is_active": true,
+    "is_staff": true,
+    "foto": null,
+    "tipo_usuario": 1,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$LBqVssr2JHdBqcQeoOWqpd$vCh+kteRCidy5NeAHx6LE1Ck1RjABX2dhwEZXzIMIgU=",
+    "last_login": null,
+    "is_superuser": true,
+    "passage_id": "0gzKTHQ3Jz.h4XlxolNzfXYnpPJg5IEVDaAPtYQ6cPgVgZFEvmgtfa5OiJ1IPDpskfbLCnxHL0Y",
+    "email": "eduardo.kons17@gmail.com",
+    "name": "Edukons",
+    "is_active": true,
+    "is_staff": true,
+    "foto": null,
+    "tipo_usuario": 1,
+    "groups": [],
+    "user_permissions": [
+    ]
+  }
+},
+{
+  "model": "core.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$xj8LD6ktgbThPMiD5ZJyqS$gOLtB1v3jDq9LOfM+AIRExbjNcTZAhakfmabMzrzRaA=",
+    "last_login": null,
+    "is_superuser": false,
+    "passage_id": "1234",
+    "email": "laissa.mendes2006@gmail.com",
+    "name": "Laíssa Mendes",
+    "is_active": true,
+    "is_staff": false,
+    "foto": null,
+    "tipo_usuario": 1,
+    "groups": [],
+    "user_permissions": [
+    ]
+  }
+},
+{
+  "model": "core.user",
+  "pk": 4,
+  "fields": {
+    "password": "!YbZMk7DNU6o5AWQOe9sjBgjdXaFC2KjsjvJRaMY1",
+    "last_login": null,
+    "is_superuser": false,
+    "passage_id": "TvHnKdpiSFqAXolRuG2yp1ZB",
+    "email": "dudakrdozo@gmail.com",
+    "name": "",
+    "is_active": true,
+    "is_staff": false,
+    "foto": null,
+    "tipo_usuario": 1,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.pessoa",
+  "pk": 1,
+  "fields": {
+    "nome": "Eduardo Kons",
+    "rg": "7818363",
+    "cpf": "137.819.039-40",
+    "data_nasc": "2007-03-17",
+    "fotoPessoa": 2,
+    "status_escolaridade": 4
+  }
+},
+{
+  "model": "core.pessoa",
+  "pk": 2,
+  "fields": {
+    "nome": "Guilherme Eduardo Passos",
+    "rg": null,
+    "cpf": "124.553.949-30",
+    "data_nasc": "2006-08-06",
+    "fotoPessoa": null,
+    "status_escolaridade": 1
+  }
+},
+{
+  "model": "core.pessoa",
+  "pk": 3,
+  "fields": {
+    "nome": "Ford",
+    "rg": "12312313",
+    "cpf": "22222222222",
+    "data_nasc": "2024-10-31",
+    "fotoPessoa": 1,
+    "status_escolaridade": 2
+  }
+},
+{
+  "model": "core.animal",
+  "pk": 1,
+  "fields": {
+    "nome": "Fumaça",
+    "especie": "Cachorro vira-lata",
+    "descricao": "Lindo, fofo. roliço e peludo",
+    "fotoAnimal": 1
+  }
+},
+{
+  "model": "core.prontuario",
+  "pk": 1,
+  "fields": {
+    "data_adoeceu": "2024-09-08",
+    "descricao": "Dodói",
+    "animal": 1
+  }
+},
+{
+  "model": "core.casa",
+  "pk": 1,
+  "fields": {
+    "numero_casa": "360",
+    "numero_comodos": "9",
+    "descricao": "Casa amarela"
+  }
+},
+{
+  "model": "core.casa",
+  "pk": 2,
+  "fields": {
+    "numero_casa": "300",
+    "numero_comodos": "7",
+    "descricao": "Casa Verde"
+  }
+},
+{
+  "model": "core.casa",
+  "pk": 3,
+  "fields": {
+    "numero_casa": "7",
+    "numero_comodos": "1",
+    "descricao": "Casa preta"
+  }
+}
+]
