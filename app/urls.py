@@ -15,7 +15,6 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from core.views import UserViewSet
 from core.views import PessoaViewSet
 from core.views import AnimalViewSet
-from core.views import ProntuarioViewSet
 from core.views import CasaViewSet
 
 router = DefaultRouter()
@@ -23,7 +22,6 @@ router = DefaultRouter()
 router.register(r"usuarios", UserViewSet, basename="usuarios")
 router.register(r"Pessoas", PessoaViewSet, basename="pessoas")
 router.register(r"animais", AnimalViewSet, basename="animais")
-router.register(r"prontuarios", ProntuarioViewSet, basename="prontuarios")
 router.register(r"casas", CasaViewSet, basename="casa")
 
 urlpatterns = [

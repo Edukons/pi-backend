@@ -54,5 +54,4 @@ class UserAdmin(BaseUserAdmin):
 admin.site.register(models.User, UserAdmin)
 admin.site.register(models.Pessoa)
 admin.site.register(models.Animal)
-admin.site.register(models.Prontuario)
 admin.site.register(models.Casa)
