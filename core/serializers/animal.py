@@ -19,3 +19,4 @@ class AnimalSerializer(ModelSerializer):
     class Meta:
         model = Animal
         fields = "__all__"
+    
